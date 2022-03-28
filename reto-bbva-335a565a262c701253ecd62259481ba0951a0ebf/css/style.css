@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
-
 * {
     margin: 0;
     padding: 0;
@@ -11,6 +10,7 @@ html {
     font-size: 62.5%;
     color: white;
     font-family: 'Lato', sans-serif;
+    animation:moverIzquierda 1s ease ease-in;
 }
 
 body {
@@ -25,11 +25,12 @@ header {
     height: 7vh;
     background-color: #072146;
     z-index: 1;
+    
 }
 
 .header-content {
     background-color: #072146;
-    display: none;
+    display:none;
     height: calc(100vh - 52px);
     width: 100%;
     position: relative;
@@ -42,11 +43,11 @@ header {
 .header-content ul {
     width: 100%;
 }
-
 .header-content li {
     margin: 0.5rem;
     list-style: none;
 }
+
 
 .header-content a {
     color: white;
@@ -82,6 +83,7 @@ header {
 #closeMenuButton img {
     height: 40px;
     width: 40px;
+    
 }
 
 .menu-content {
@@ -91,12 +93,16 @@ header {
     justify-content: space-around;
     align-items: center;
     font-size: 1.8rem;
+
 }
 
 .logo {
     font-size: 1.8rem;
     letter-spacing: 0.4rem;
-    cursor: pointer;
+    animation:moverIzquierda 1s ease ease-in;
+    z-index:10000;
+
+    
 }
 
 .menu-content .list-items {
@@ -108,9 +114,10 @@ header {
 .menu-content .list-items a {
     text-decoration: none;
     color: white;
-    padding: 1.5rem;
+  padding: 1.5rem;
     transform: 2ms ease-in;
     position: relative;
+    
 }
 
 .menu-content .list-items a:before {
@@ -120,7 +127,7 @@ header {
     left: 0px;
     width: 0px;
     height: 1px;
-    background-color: rgb(247, 247, 242);
+    background-color:rgb(247, 247, 242);
     transition: all 1.5s ease; 
 }
 
@@ -158,17 +165,18 @@ main {
 
 .a11y-content {
     color: black;
-    height: auto;
+    width:auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
     padding: 1rem;
-    background-color: #f4f4f4;
+    background-color: #fafafa;
 }
 
 .second-text {
+    height: 80px;
     text-align: center;
     margin-bottom: 2rem;
     padding: 1rem;
@@ -177,6 +185,7 @@ main {
 }
 
 .a11y-content p {
+    
     padding: 1rem;
     color: #666666;
 }
@@ -188,17 +197,27 @@ main {
 }
 
 .card {
-    background-color: #ffffff;
-    border-radius: 2px;
+    background-color: #5bbeff;
+    border-radius: 5px;
     box-shadow: 0 1px 1px 0 rgb(0 0 0 / 20%);
     margin: 16px;
+    min-width: 200px
 }
 
 .card-title {
+    
     padding: 1rem;
+    font-size: 1.2rem;
+   
+} 
+.card-text {
+    font-size: 1.2rem;
+   background-color: rgb(7, 2, 2);
+   
 }
 
 .btns {
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -215,7 +234,10 @@ main {
     background-color: #1973b8;
     font-weight: bold;
     letter-spacing: 0.2rem;
-    border-radius: 0.125rem;
+    border-radius: 0.325rem;
+}
+.btns button:hover {
+    background-color:#5bbeff;
 }
 
 .btns button:hover {
@@ -264,7 +286,22 @@ footer{
     transform: 2ms ease-in;
     position: relative;
 }
+@keyframes moverIzquierda {
+    0%{
+        opacity: 0;
+        transition:translatex(-100px);
 
+    }
+    100%{
+        opacity: 1;
+        transition:translatex(0);
+    }
+  
+
+
+    }
+        
+    
 
 @media screen and (min-width: 600px) {
     body {
@@ -274,10 +311,12 @@ footer{
         background-position-y: 0px;
         background-repeat: no-repeat;
     }
-    
     .cards {
         flex-direction: row;
         flex-wrap: nowrap;
         width: 100%;
     }
-}
+        
+
+
+    }
