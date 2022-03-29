@@ -99,8 +99,8 @@ header {
 .logo {
     font-size: 1.8rem;
     letter-spacing: 0.4rem;
-    animation:moverIzquierda 1s ease ease-in;
-    z-index:10000;
+    
+    
 
     
 }
@@ -210,11 +210,13 @@ main {
     font-size: 1.2rem;
    
 } 
-.card-text {
+ .card-text{
+     padding: 1rem;
     font-size: 1.2rem;
-   background-color: rgb(7, 2, 2);
+    color: black;
    
 }
+
 
 .btns {
     
